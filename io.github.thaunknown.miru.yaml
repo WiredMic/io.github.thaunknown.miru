@@ -1,8 +1,8 @@
 app-id: io.github.thaunknown.miru
 base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
+base-version: "24.08"
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: miru-run
 separate-locales: false
@@ -47,12 +47,13 @@ modules:
         path: io.github.thaunknown.miru.metainfo.xml
       - type: file
         dest-filename: miru.AppImage
-        url: https://github.com/thaunknown/miru/releases/download/v5.5.9/linux-Miru-5.5.9.AppImage
-        sha512: 5d63e7f4f8ce42b5087ba251fe307e1842b525a164a2f5b3cd0876dbc6087e31a3f08e57ec0b3f18976e028bd5cdf3588bda05a6748a692704149b50657de656
+        url: https://github.com/ThaUnknown/miru/releases/download/v5.5.10/linux-Miru-5.5.10.AppImage
+        sha512: b61d33ee4fc794fa2d5fdb8a641203e35f8dfac7c25515e38ed6dbafc471d41e87cde4b311390fb92011c7b5335627cb18716b7e45b99cd63debbf8692a17385
         only-arches: [x86_64]
         x-checker-data:
           type: json
           url: https://api.github.com/repos/thaunknown/miru/releases/latest
           version-query: .tag_name | sub("^v"; "")
-          url-query: '"https://github.com/thaunknown/miru/releases/download/v" + $version
+          url-query:
+            '"https://github.com/thaunknown/miru/releases/download/v" + $version
             + "/linux-Miru-" + $version + ".AppImage"'
